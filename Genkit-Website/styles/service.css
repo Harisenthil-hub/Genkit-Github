@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+
+    background-color: #ffff;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Section-2-service */
+
+.section-2-service{
+    margin: 0 4.5rem;
+    margin-top: 4rem;
+    border-radius: 1rem;
+    /* border-top: 0.01rem #808080 solid; */
+    padding: 2rem 2rem 2rem 0;
+}
+
+.section-2-service h2{
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+.section-2-service h2 span{
+    color: #808080;
+}
+
+.content-wrap-service{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.service-cards{
+
+    border: 0.01rem solid transparent;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    /* background-color: #e6eeee; */
+    box-shadow: 2px 2px 5px #717171;
+    transition: transform 0.3s ease;
+}
+
+
+.service-cards:hover{
+    transform: translateY(-0.5rem);
+}
+
+.img-content-service{
+    height: 17rem;
+    width: 33rem;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.img-content-service img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content-service{
+    width: 33rem;
+    height: 25rem;
+    margin-left: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.content-service h4{
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    
+}
+
+.content-service p{
+    font-size: 1.4rem;
+    letter-spacing: 0.01rem;
+    color: #1c1c1c;
+    width: 98%;
+}
+
+.content-service div a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #0000cc;
+}
+
+
+/* Section-3-service */
+
+.section-3-service{
+    margin: 3rem 4.5rem;
+    border-top: 0.01rem #808080 solid;
+    
+}
+
+.section-3-service h2{
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+
+.section-3-service h2 span{
+    color: #808080;
+}
+
+
+/* Section-3-service */
+
+
+.scroll-wrap {
+    position: relative;
+    overflow: hidden;
+    margin: 2.5rem 2.9rem 0 8rem;
+    max-width: 80%;
+}
+
+.scroll-track {
+    display: flex;
+    gap: 4rem;
+    padding-block: 1rem;
+    width: 80%;
+    animation: scroll 30s linear infinite;
+}
+
+.img-scroll {
+flex-shrink: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+min-width: 7rem;
+padding: 1rem;
+border-radius: 0.5rem;
+box-shadow: 0 0.5rem 1rem -0.25rem #111827; /* Subtle Shadow */
+}
+
+.img-scroll svg {
+width: 5rem;
+height: 5rem;
+}
+
+/* Scroll Animation */
+@keyframes scroll {
+to {
+    transform: translateX(calc(-50% - 2rem));
+}
+}
+
+/* Fade Effects */
+.fade-left,
+.fade-right {
+position: absolute;
+top: 0;
+width: 5rem;
+height: 100%;
+z-index: 2;
+pointer-events: none;
+}
+
+.fade-left {
+left: 0;
+background: linear-gradient(to right, white, transparent);
+}
+
+.fade-right {
+right: 0;
+background: linear-gradient(to right, white, transparent);
+}
+
+
+
+/*  
+.scroll-wrap {
+    margin-top: 2.5rem;
+    margin-left: 8rem;
+    margin-right: 2.9rem;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    will-change: transform;
+    
+}
+
+.img-scroll:nth-child(10) svg{
+    width: 8rem;
+    overflow: hidden;
+}
+
+.img-scroll{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    animation: loop 1s linear infinite;
+}
+
+.img-scroll svg{
+   height: 5rem;
+   width: 7rem;
+}
+
+
+
+
+@keyframes loop{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+/* Fade overlays 
+.fade-left,
+.fade-right {
+  position: absolute;
+  top: 0;
+  width: 5rem;
+  height: 100%;
+  border-radius: 0.4rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fade-left {
+  left: 0;
+  background: linear-gradient(to right, rgb(230, 232, 231), transparent);
+}
+
+.fade-right {
+  right: 0;
+  background: linear-gradient(to left, rgb(244, 238, 238), transparent);
+}
+
+ */
