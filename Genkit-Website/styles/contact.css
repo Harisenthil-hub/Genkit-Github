@@ -1,0 +1,90 @@
+.section-2-contact{
+    position: relative;
+    margin: 2.5rem  4.5rem 0 4.5rem;
+    height: 30rem;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.section-2-contact img{
+    position: absolute;
+    width: 100%;
+    top: -25rem;
+    
+}
+
+.section-3-contact{
+    margin: 4rem 4.5rem 0rem 4.5rem;
+}
+
+
+.section-3-contact h2{
+    padding-left: 1rem;
+    font-size: 4rem;
+
+}
+
+.section-3-contact h2 span{
+    color: #808080;
+}
+
+
+
+/* FAQ Container  */
+
+.faq-container {
+    position: relative;
+    margin-top: 3rem;
+    margin-left: 4rem;
+    width: 50%;
+}
+
+.faq-item {
+    position: absolute;
+    width: 100%;
+    background: white;
+    border-radius: 2rem;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.faq-item .faq-answer {
+    display: none;
+    margin-top: 15px;
+    color: #444;
+    font-size: 1.6rem;
+}
+
+.faq-item.active .faq-answer {
+ display: block;
+}
+
+.faq-question {
+    font-size: 1.4rem;
+    font-weight: bold;
+    position: relative;
+}
+
+
+.faq-question::after {
+    content: '+';
+    font-size: 2rem;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: auto;
+}
+
+
+.faq-item.active .faq-question::after {
+    content: '-';
+}
+
+.faq-item.blur {
+    filter: blur(4px);
+    opacity: 0.5;
+    pointer-events: none;
+}

@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+
+    background-color: #ffff;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Section-2-service */
+
+.section-2-service{
+    margin: 0 4.5rem;
+    margin-top: 4rem;
+    border-radius: 1rem;
+    /* border-top: 0.01rem #808080 solid; */
+    padding: 2rem 2rem 2rem 0;
+}
+
+.section-2-service h2{
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+.section-2-service h2 span{
+    color: #808080;
+}
+
+.content-wrap-service{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.service-cards{
+
+    border: 0.01rem solid transparent;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    /* background-color: #e6eeee; */
+    box-shadow: 2px 2px 5px #717171;
+    transition: transform 0.3s ease;
+}
+
+
+.service-cards:hover{
+    transform: translateY(-0.5rem);
+}
+
+.img-content-service{
+    height: 17rem;
+    width: 33rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.img-content-service img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    
+}
+
+
+
+.content-service{
+    width: 33rem;
+    height: 25rem;
+    margin-left: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.content-service h4{
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    
+}
+
+.content-service p{
+    font-size: 1.4rem;
+    letter-spacing: 0.01rem;
+    color: #1c1c1c;
+    width: 98%;
+}
+
+.content-service div a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #0000cc;
+}
+
+
+/* Section-3-service */
+
+.section-3-service{
+    margin: 3rem 4.5rem;
+    border-top: 0.01rem #808080 solid;
+    
+}
+
+.section-3-service h2{
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+
+.section-3-service h2 span{
+    color: #808080;
+}
+
+
+/* Section-3-service */
+
+
+.scroll-wrap {
+    position: relative;
+    overflow: hidden;
+    margin: 2.5rem 2.9rem 0 9rem;
+    max-width: 90%;
+    
+}
+  
+.scroll-track {
+    display: flex;
+    gap: 4rem;
+    padding-block: 1.5rem ;
+    width: max-content;
+    align-items: center;
+    animation: scroll 40s linear infinite;
+}
+  
+.img-scroll {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 7rem;
+    
+}
+  
+.img-scroll svg {
+    width: 6rem;
+    height: 5rem;
+}
+
+
+  
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-50% - 2rem));
+    }
+}
+
+
+.fade-left,
+.fade-right {
+    position: absolute;
+    top: 0;
+    width: 5rem;
+    height: 100%;
+    border-radius: 0.4rem;
+    z-index: 2;
+    pointer-events: none;
+}
+  
+
+
+.fade-left {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+}
+  
+
+.fade-right {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, rgba(255, 255, 255, 0));
+}
+
+  
+/* Section-3-service */
+
+.section-4-service{
+    margin: 3rem 4.5rem 0 4.5rem;
+    border-top: 0.01rem solid #808080;
+    position: relative;
+}
+
+.section-4-service h2{
+    margin: 2rem 0rem 0rem 1rem;
+    font-size: 3rem;
+}
+
+.section-4-service h2 span{
+    color: #808080;
+}
+
+
+/* Section-3-service Grid Part */
+
+.content-wrapper-service{
+    padding: 3rem 4rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    gap: 4rem 4rem;
+    place-items: center;
+    align-items: center;
+    
+}
+
+.img-grid-service{
+    width: 80%;
+    height: 30rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 0.5rem;
+    
+}
+
+
+.img-grid-service img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+.text-grid-service{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-grid-service ul{
+    width: 80%;
+}
+
+
+.text-grid-service ul li{
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.text-grid-service h4{
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
+.text-grid-service li span{
+    font-weight: bold;
+}
+
+.line-div{
+    width: 0.10rem;
+    background-color: #0000cc;
+    position: absolute;
+    top: 9.49rem;
+    height: 98rem;
+    bottom: 0;
+    left: 51.5%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+/* Section-5-service */
+
+.section-5-service{
+    margin-top: 5rem;
+}
+
+
