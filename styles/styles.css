@@ -196,7 +196,7 @@ button:focus {
     width: 70%;
     height: 85%;
     position: relative;
-    border-radius: 2rem;
+    border-radius: 1rem;
     overflow: hidden;
 }
   
@@ -1167,3 +1167,318 @@ button:focus {
 
 }
 
+
+
+
+/* Responsive for Mobile  */
+
+
+/* Starting with Nav bar */
+
+
+.menu-toggle{
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.navbar{
+    position: relative;
+}
+
+.no-scroll{
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+@media (max-width:768Px) {
+
+
+    .navbar{
+        margin: 0 3rem 0 3rem;
+    }
+
+   .logo-div{
+    margin: 0;
+   }
+
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        max-height: 0;
+        background: #fff;
+        transition: max-height 0.3s ease-out;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        max-height: 500px; /* Enough height to reveal all links */
+        transition: max-height 0.3s ease-in;
+        
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+
+    .nav-links a {
+        color: #000;
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .tagline h1{
+        font-size: 2rem;
+    }
+
+    .tagline-main p{
+        font-size: 1.4rem;
+    }
+
+
+    /* Section-2 */
+
+    .section-2{
+        display: flex;
+        flex-direction: column;
+        margin: 3rem  3rem;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .leftside-content div:first-child {
+        padding-right: 0;
+        border: none;
+    }
+
+    .rightside-content,.leftside-content{
+        width: 100%;
+        display: block;
+    }
+
+    .leftside-content p{
+        width: 98%;
+    }
+
+    .btn-div{
+        display: flex;
+    }
+
+    .btn-contact,.btn-service{
+        font-size: 1.3rem;
+    }
+
+    .rightside-content{
+        height: 25rem;
+        padding: 0;
+    }
+
+    .slides{
+        height: 100%;
+        width: 100%;
+    }
+
+
+    /* section-3-mobile */
+
+    .section-3{
+        margin: 0 3rem;
+    }
+
+    .exp-div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .exp-div h6{
+        font-size: 2.5rem;
+    }
+
+    /* Section-4 */
+
+    .section-4{
+        margin: 0 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .section-4 h6{
+        font-size: 3rem;
+    }
+
+    .uni-div-main{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+
+    }
+
+    .br-exp{
+        display: none;
+    }
+
+    .section-5 {
+        margin: 0 3rem;
+        border-top: 0.1rem solid #dee0ff;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+
+    .solutions-grid{
+        margin: 0;
+    }
+
+
+    .section-6{
+        margin: 2rem 0rem;
+        border-radius: 1rem;
+    }
+
+    .section-6 h2{
+        margin-left: 1rem;
+        margin-top: 3rem;
+    }
+
+    .why-div p{
+        margin-left: 1.3rem;
+        text-indent: 3.5rem;
+    }
+
+    .link-div{
+        margin-left: 1.3rem;
+    }
+
+
+    /* Section-7 */
+
+    .section-7{
+        margin: 0 0;
+    }
+
+    .top-div{
+        border-radius: 0 0;
+    }
+    
+
+    .top-div h2{
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+    }
+
+    
+    .bottom-div h6{
+        font-size: 1.6rem;
+        margin: 2rem 0;
+        font-weight: bold;
+        
+    }
+
+    .bottom-div > p{
+        margin: 0;
+    }
+    .bottom-div h5 {
+        font-size: 1.6rem;
+        padding: 2rem 2rem 0rem 2rem;
+    }
+
+    .btm-content-wrap{
+        width: auto;
+    }
+
+    .btm-content-div li{
+        gap: 0.2rem;
+    }
+
+    .btm-content-div img{
+        height: 1.4rem;
+    }
+
+
+    .btm-content-div p{
+        font-size: 1.2rem;
+    }
+    
+
+    .contact-content-wrap {
+        margin-left: 1rem;
+        margin-top: 1.5rem;
+         gap: 1rem;
+         width: auto;
+    }
+
+    
+    .contact-content {
+        gap: 1rem;
+    }
+    
+
+    .contact-content-wrap img {
+        margin-right: 0;
+        height: 3rem;
+        width: 1rem;
+    }
+
+    .contact-content h4 {
+        font-size: 2rem;
+    }
+
+    .contact-content div span {
+        font-size: 1rem;
+    }
+
+    .contact-content div p {
+        width: 100%;
+        font-size: 1rem;
+        
+        line-height: 1.3rem;
+        font-weight: lighter;
+    }
+
+    .over-flow-div{
+        margin-top: 3rem;
+        position: static;
+        width: auto;
+        border-radius: 0;
+        border-top: 0.1rem solid #808080;
+    }
+
+
+    /* Footer */
+
+    .footer{
+        margin-top: 3rem;
+        height: auto;
+
+    }
+
+    .footer-div{
+        flex-direction: column;
+    }
+
+    .footer-logo-div img,
+    .footer-logo-div p, 
+    .footer-logo-div h5{
+        margin-left: 0;
+    }
+
+    .social-div{
+        text-align: left;
+    }
+
+}

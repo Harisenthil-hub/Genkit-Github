@@ -342,20 +342,251 @@ if(scrollWrap){
 
 // FAQ Section
 
+
+
 const faqItems = document.querySelectorAll('.faq-item');
 
-if (faqItems) {
+if (faqItems.length) {
+  const faqWrapper = document.querySelector('.faq-wrapper');
+
+  const defaultGap = 16; // px
+
+  function resetStack() {
+    const width = window.innerWidth;
+
+    // Reset all first
+    faqItems.forEach(item => {
+      item.classList.remove('active', 'blur');
+    });
+
+    let topOffset = 0;
+
+    faqItems.forEach((item, i) => {
+      const index = parseInt(item.dataset.index);
+
+      // Apply custom spacing only for index 2, 3, 4 on mobile
+      if (width <= 768 && index >= 2) {
+        if (index === 2) topOffset = 2*65;
+        else if (index === 3) topOffset = 3*65;   // more space for 4th
+        else if (index === 4) topOffset = 4*70;  // even more for 5th
+        item.style.top = `${topOffset}px`;
+        topOffset += item.offsetHeight + defaultGap;
+      } else {
+        // Default behavior for others
+        item.style.top = `${i * 65}px`;
+      }
+
+      item.style.zIndex = `${faqItems.length - i}`;
+    });
+
+    // faqWrapper.style.minHeight = `${topOffset + 100}px`; // keep space
+  }
+
+  // Initial layout
+  resetStack();
+
+  faqItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      resetStack();
+
+      if (!isActive) {
+        item.classList.add('active');
+        item.style.top = `0px`;
+        item.style.zIndex = 100;
+
+        faqItems.forEach(other => {
+          if (other !== item) {
+            other.classList.add('blur');
+          }
+        });
+      }
+    });
+  });
+
+  // Reset on resize
+  window.addEventListener('resize', resetStack);
+}
+
+
+
+// const faqItems = document.querySelectorAll('.faq-item');
+
+// if (faqItems.length) {
+//   const faqWrapper = document.querySelector('.faq-wrapper');
+
+//   const gap = 16; // px gap between items
+
+//   function getItemHeight() {
+//     // Use the tallest collapsed item height as baseline
+//     let maxHeight = 0;
+//     faqItems.forEach(item => {
+//       item.classList.remove('active');
+//       item.style.height = 'auto';
+//       maxHeight = Math.max(maxHeight, item.offsetHeight);
+//     });
+//     return maxHeight;
+//   }
+
+//   function resetStack() {
+//     const itemHeight = getItemHeight();
+//     faqItems.forEach((item, i) => {
+//       item.classList.remove('active', 'blur');
+//       item.style.zIndex = `${faqItems.length - i}`;
+//       item.style.top = `${i * (itemHeight + gap)}px`;
+//     });
+
+//     faqWrapper.style.minHeight = `${faqItems.length * (itemHeight + gap)}px`;
+//   }
+
+//   // First layout
+//   resetStack();
+
+//   // Click interaction
+//   faqItems.forEach((item) => {
+//     item.addEventListener('click', () => {
+//       const isActive = item.classList.contains('active');
+//       resetStack();
+
+//       if (!isActive) {
+//         item.classList.add('active');
+//         item.style.top = `0px`;
+//         item.style.zIndex = 100;
+
+//         faqItems.forEach(other => {
+//           if (other !== item) {
+//             other.classList.add('blur');
+//           }
+//         });
+//       }
+//     });
+//   });
+
+//   // Recalculate on window resize
+//   window.addEventListener('resize', resetStack);
+// }
+
+
+
+
+// const faqItems = document.querySelectorAll('.faq-item');
+
+// if (faqItems){
+
+
+//   function getSpacing() {
+//     const width = window.innerWidth;
+//     if (width <= 480) return 80;      // mobile
+//     if (width <= 768) return 55;      // tablet
+//     return 65;                        // desktop
+//   }
+  
+//   function resetStack() {
+//     const spacing = getSpacing();
+//     faqItems.forEach((item, i) => {
+//       item.classList.remove('active', 'blur');
+//       item.style.zIndex = `${faqItems.length - i}`;
+//       if(item){
+
+//       }else{
+//         item.style.top = `${i * spacing}px`;
+//       }
+      
+//     });
+//   }
+  
+//   faqItems.forEach((item, i) => {
+//     const spacing = getSpacing();
+//     item.style.zIndex = `${faqItems.length - i}`;
+//     item.style.top = `${i * spacing}px`;
+  
+//     item.addEventListener('click', () => {
+//       const isActive = item.classList.contains('active');
+//       resetStack();
+  
+//       if (!isActive) {
+//         item.classList.add('active');
+//         item.style.top = `0px`;
+//         item.style.zIndex = 100;
+  
+//         faqItems.forEach(other => {
+//           if (other !== item) {
+//             other.classList.add('blur');
+//           }
+//         });
+//       }
+//     });
+//   });
+  
+
+
+
+//   /*
+//   function resetStack() {
+//     faqItems.forEach((item, i) => {
+//       item.classList.remove('active', 'blur');
+//       item.style.zIndex = `${faqItems.length - i}`;
+//       item.style.top = `${i * 65}px`;  // spacing
+      
+//     });
+//   }
+
+
+//   faqItems.forEach((item, i) => {
+//     item.style.zIndex = `${faqItems.length - i}`;
+//     item.style.top = `${i * 65}px`;
+    
+
+//     item.addEventListener('click', () => {
+//       const isActive = item.classList.contains('active');
+//       resetStack();
+
+//       if (!isActive) {
+//         item.classList.add('active');
+//         item.style.top = `0px`;
+//         item.style.zIndex = 100;
+
+//         faqItems.forEach(other => {
+//           if (other !== item) {
+//             other.classList.add('blur');
+//           }
+//         });
+//       }
+//     });
+//   });
+
+//   */
+// }
+
+/*
+const faqItems = document.querySelectorAll('.faq-item');
+
+if (faqItems.length) {
+  const isMobile = window.innerWidth <= 768;
+
+  // Initial spacing for mobile (before any click)
+  const mobileCustomSpacing = [62, 62, 62, 72, 80]; // index-wise spacing
+
   function resetStack() {
     faqItems.forEach((item, i) => {
       item.classList.remove('active', 'blur');
-      item.style.top = `${i * 65}px`;  // spacing
       item.style.zIndex = `${faqItems.length - i}`;
+
+      // After reset, use common spacing on mobile (e.g., 80px for all)
+      const spacing = isMobile ? 80 : 65;
+      item.style.top = `${i * spacing}px`;
     });
   }
 
   faqItems.forEach((item, i) => {
-    item.style.top = `${i * 65}px`;
     item.style.zIndex = `${faqItems.length - i}`;
+
+    if (isMobile) {
+      // Apply the initial custom spacing only before any click
+      item.style.top = `${mobileCustomSpacing[i] || 65}px`;
+    } else {
+      item.style.top = `${i * 65}px`;
+    }
 
     item.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
@@ -376,6 +607,9 @@ if (faqItems) {
   });
 }
 
+*/
+
+
 
 
 
@@ -383,6 +617,7 @@ if (faqItems) {
 
 const dot = document.getElementById("movingDot");
 if(dot){
+
   const container = document.querySelector(".scroll-line-container");
   const cards = [
     { el: document.getElementById("card1"), pos: 15 },
@@ -428,3 +663,39 @@ if(dot){
   });
 
 }
+
+
+
+
+// Responsive scripts
+
+// Nav-bar
+
+
+const toggleBtn = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const menuDiv = document.querySelector('.menu-toggle')
+
+toggleBtn.addEventListener('click', () => {
+
+  if(!navLinks.classList.contains('active')){
+    navLinks.classList.toggle('active')
+    menuDiv.innerText='✕'
+    document.body.classList.add('no-scroll')
+    document.querySelector('.navbar').classList.add('navbar-mobile')
+  }else{
+    navLinks.classList.remove('active')
+    menuDiv.innerText='☰'
+    document.querySelector('.navbar').classList.remove('navbar-mobile')
+    document.body.classList.remove('no-scroll')
+
+
+  }
+});
+
+
+// Faq Responsive
+
+
+
+

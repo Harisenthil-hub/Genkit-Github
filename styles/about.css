@@ -224,4 +224,99 @@ contact-content {
 
 
 
-/*  */
+/* Responsivenes */
+
+
+@media (max-width:768px) {
+
+    .section-2-about{
+        margin: 2.5rem  0rem 0rem 0rem;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+
+    .section-2-about img {
+        position: relative;
+        top: auto;
+        object-fit: cover;
+    }
+
+
+
+    /* Section-3-about */
+
+    .section-3-about {
+        margin: 2rem 3rem 0rem 1rem;
+    }
+
+    .line-div{
+        display: none;
+    }
+    
+    .section-3-about > h6{
+        margin-bottom: 4rem;
+    }
+
+    
+
+    .content-wrapper-about{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0;
+        gap: 2rem;
+    }
+    
+
+    .image-content-about{
+        height: 20rem;
+        width: 100%;
+    }
+
+    .content-wrapper-about img{
+        height: 100%;
+        width: 100%;
+    }
+    
+
+    .text-1{
+        order: 2;
+    }
+
+    .text-2{
+        order: 4;
+    }
+
+    .image-1{
+        order: 1;
+    }
+
+    .image-2{
+        order: 3;
+        margin-top: 2rem;
+    }
+
+    .text-content-about ul{
+        text-align: center;
+        list-style-position: outside;
+    }
+
+    
+    .section-4-about{
+        padding: 0;
+        margin: 0;
+        margin-top: 2rem;
+        border-radius: 0;
+        box-shadow: none;
+        padding-bottom: 2rem;
+    }
+
+    .section-4-about h6{
+        width: 60%;
+        margin-left: 2rem;
+        
+    }
+
+
+}
